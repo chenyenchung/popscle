@@ -29,6 +29,7 @@
 #include <iostream>
 #include <memory>
 #include <cassert>
+#include <limits>
 
 template <class Scalar, typename Value>
 class gtfInterval {

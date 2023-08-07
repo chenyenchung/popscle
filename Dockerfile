@@ -26,14 +26,14 @@
  RUN git clone https://github.com/samtools/htslib.git
  RUN cd htslib && \
      git submodule update --init --recursive && \
-     autoheader && \
-     autoconf && \
+     autoreconf -i && \
      ./configure --prefix=/usr/local/ && \
      make && \
      make install
   
 # Install popscle
- RUN git clone https://github.com/statgen/popscle.git
+ #RUN git clone https://github.com/statgen/popscle.git
+ COPY . popscle
  RUN cd popscle && \
      mkdir build && \
      cd build && \
